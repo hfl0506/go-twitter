@@ -51,6 +51,14 @@ func GetUser(ctx *fiber.Ctx) error {
 	return ctx.JSON(user)
 }
 
+func GetUserByName(username string) (*entities.User, error) {
+	user, err := services.GetUserByName(username)
+	if err != nil {
+		return nil, err
+	}
+	return user, nil
+}
+
 func UpdateUser(ctx *fiber.Ctx) error {
 	var user *entities.User
 

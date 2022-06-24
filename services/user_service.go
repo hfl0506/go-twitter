@@ -46,6 +46,20 @@ func GetUser(userId string) (*entities.User, error) {
 	return user, err
 }
 
+func GetUserByName(username string) (*entities.User, error) {
+	var err error
+	var user *entities.User
+
+	res := database.Conn.Find(&user, username)
+
+	if res.Error != nil {
+		err = res.Error
+		utils.WarningLog.Println(err.Error())
+	}
+
+	return user, err
+}
+
 func UpdateUser(newUser *entities.User, userId string) (*entities.User, error) {
 	user, err := GetUser(userId)
 	if err == nil {
