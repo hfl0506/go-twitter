@@ -1,11 +1,15 @@
 package routes
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"go-twitter/controllers"
+
+	"github.com/gofiber/fiber/v2"
+)
 
 func SetupAuthRoutes(api fiber.Router) {
 	authRoute := api.Group("/auth")
 
-	authRoute.Post("/login")
-	authRoute.Post("/forgetpassword")
-	authRoute.Post("/activate")
+	authRoute.Post("/login", controllers.Login)
+	//authRoute.Post("/forgetpassword")
+	//authRoute.Post("/activate")
 }

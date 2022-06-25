@@ -47,3 +47,13 @@
 [INFO]: 2022/06/19 21:41:10.100180 /Users/hinfeili/Desktop/go-twitter/main.go:14: starting the server on port :3000
 [INFO]: 2022/06/19 21:44:25.590341 /Users/hinfeili/Desktop/go-twitter/database/database.go:38: connecting to database
 [INFO]: 2022/06/19 21:44:25.690204 /Users/hinfeili/Desktop/go-twitter/main.go:14: starting the server on port :3000
+[INFO]: 2022/06/25 19:14:40.103069 /Users/hinfeili/Desktop/go-twitter/database/database.go:38: connecting to database
+[INFO]: 2022/06/25 19:14:40.192832 /Users/hinfeili/Desktop/go-twitter/main.go:14: starting the server on port :3000
+[INFO]: 2022/06/25 19:19:23.132968 /Users/hinfeili/Desktop/go-twitter/database/database.go:38: connecting to database
+[INFO]: 2022/06/25 19:21:35.479095 /Users/hinfeili/Desktop/go-twitter/database/database.go:38: connecting to database
+[INFO]: 2022/06/25 19:22:15.549693 /Users/hinfeili/Desktop/go-twitter/database/database.go:38: connecting to database
+[INFO]: 2022/06/25 19:22:15.632860 /Users/hinfeili/Desktop/go-twitter/main.go:14: starting the server on port :3000
+[WARNING]: 2022/06/25 19:22:19.447392 /Users/hinfeili/Desktop/go-twitter/services/user_service.go:57: ERROR: column "lihinfei0506" does not exist (SQLSTATE 42703)
+[INFO]: 2022/06/25 19:28:53.701155 /Users/hinfeili/Desktop/go-twitter/database/database.go:38: connecting to database
+[INFO]: 2022/06/25 19:28:53.789806 /Users/hinfeili/Desktop/go-twitter/main.go:14: starting the server on port :3000
+[WARNING]: 2022/06/25 19:29:01.789894 /Users/hinfeili/Desktop/go-twitter/services/user_service.go:57: ERROR: column "lihinfei0506" does not exist (SQLSTATE 42703)

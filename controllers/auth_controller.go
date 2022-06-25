@@ -20,13 +20,18 @@ func Login(ctx *fiber.Ctx) error {
 
 	user, _ := GetUserByName(req.Name)
 
-	isMatch := utils.ComparePassword(req.Password, user.Password)
+	isMatch, err := utils.ComparePassword(req.Password, user.Password)
 
-	if isMatch.Error != nil {
-		return ctx.Status(500).JSON(fiber.Map{"error": isMatch.Error()})
+	if !isMatch && err != nil {
+		return ctx.Status(500).JSON(fiber.Map{"error": err})
 	}
 
-	accessToken, _ := utils.generateAccessToken(user)
+	arg := utils.Payload{
+		ID:   string(user.ID),
+		Name: user.Name,
+	}
+
+	accessToken, _ := utils.GenerateAccessToken(&arg)
 
 	return ctx.JSON(fiber.Map{"accessToken": accessToken})
 }
